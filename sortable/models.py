@@ -1,9 +1,10 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Sortable(models.Model):
     # Make instances reorderable
-    weight = models.IntegerField(default=0)
+    weight = models.IntegerField(_('weight'), default=0)
 
     def save(self, *args, **kwargs):
         model = self.__class__
