@@ -3,7 +3,7 @@
 // and from http://djangosnippets.org/snippets/2057/
 // to work both with and without admin-grappelli
 //
-// The model needs to have a field holding the position and that field has to 
+// The model needs to have a field holding the weight and that field has to
 // be made list_editable in the ModelAdmin. The changes of the ordering are 
 // applied after clicking 'Save'.
 
@@ -18,10 +18,10 @@
             return;
         }
     
-        // Set this to the name of the column holding the position
-        pos_field = 'position';
+        // Set this to the name of the column holding the weight
+        pos_field = 'weight';
     
-        // Determine the column number of the position field
+        // Determine the column number of the weight field
         pos_col = null;
         cols = $(table).find('tbody tr:first').children();
         for (i = 0; i < cols.length; i++) {
@@ -34,7 +34,7 @@
         $(header).css('width', '1em');
         $(header).children('a').text('#');
     
-        // Hide position field
+        // Hide weight field
         $(table).find('tbody tr').each(function(index) {
             pos_td = $(this).children()[pos_col];
             input = $(pos_td).children('input').first();
@@ -50,7 +50,7 @@
         sort_order = sorted.hasClass('descending') ? 'desc' : 'asc';
     
         if (sorted_col != pos_col) {
-            // Sorted column is not position column, bail out
+            // Sorted column is not weight column, bail out
             console.info("Sorted column is not %s, bailing out", pos_field);
             return;
         }

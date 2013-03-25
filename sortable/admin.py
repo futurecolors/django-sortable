@@ -3,8 +3,8 @@ from django.contrib import admin
 
 class SortableAdmin(admin.ModelAdmin):
     # Make instances reorderable
-    list_editable = ('position',)
-    list_display = ('position', )
+    list_editable = ('weight',)
+    list_display = ('weight', )
 
     class Media:
         js = (
