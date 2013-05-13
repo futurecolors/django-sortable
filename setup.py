@@ -1,17 +1,18 @@
 from setuptools import setup, find_packages
 
+
 setup(
-    name='sortable',
-    version='0.1.1',
-    description='An app to add drag-and-drop to Grappelli admin to reorder instances of models.',
+    name='django-sortable-fc',
+    version='1.0',
+    description='An app to add drag-and-drop to admin to reorder instances of models.',
     author='Red Interactive Agency',
     author_email='geeks@ff0000.com',
-    url='http://github.com/ff0000/sortable/',
+    url='http://github.com/futurecolors/django-sortable/',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
